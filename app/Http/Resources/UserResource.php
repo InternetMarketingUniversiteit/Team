@@ -6,7 +6,6 @@ namespace App\Http\Resources;
 
 use App\Models\User;
 use Illuminate\Http\Resources\Json\JsonResource;
-use Illuminate\Support\Str;
 
 class UserResource extends JsonResource
 {
@@ -15,9 +14,9 @@ class UserResource extends JsonResource
         /** @var User $user */
         $user = $this->resource;
         return [
-            'name' => $user->name(),
-            'email' => $user->unique()->safeEmail(),
-            'date_of_birth' => $user->date,
+            'name' => $user->name,
+            'email' => $user->email,
+            'date_of_birth' => $user->date_of_birth,
         ];
     }
 }

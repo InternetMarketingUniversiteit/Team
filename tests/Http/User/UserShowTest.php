@@ -14,8 +14,10 @@ class UserShowTest extends TestCase
         $response = $this->get('/api/users/1');
 
         $response->assertStatus(200);
-        $response->assertJson([
-
+        $response->assertJsonPath('data', [
+            'name'          => 'Adah Reichel',
+            'email'         => 'wziemann@example.net',
+            'date_of_birth' => '2021-08-08',
         ]);
     }
 }
