@@ -11,6 +11,8 @@ class UserUpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'name' => 'string',
+            'email' => 'string',
             'date_of_birth' => 'date'
         ];
     }

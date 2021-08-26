@@ -12,14 +12,26 @@ class UserUpdateTest extends TestCase
     {
         UserFactory::new()->create();
         $response = $this->patch('/api/users/1', [
-            'date_of_birth' => '2021-08-03',
+            'name' => 'Piet',
         ]);
 
         $response->assertStatus(200);
         $response->assertJsonPath('data', [
-            'name'          => 'Adah Reichel',
+            'name'          => 'Piet',
             'email'         => 'wziemann@example.net',
+            'date_of_birth' => '2021-08-06',
+        ]);
+    }
+
+    /** @test */
+    public function birth(): void
+    {
+        UserFactory::new()->create();
+        $response = $this->patch('/api/users/1', [
             'date_of_birth' => '2021-08-03',
         ]);
+
+        $response->assertStatus(200);
+        $response->assertJsonPath('data.date_of_birth', '2021-08-03');
     }
 }
