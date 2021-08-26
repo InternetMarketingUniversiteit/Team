@@ -45,20 +45,25 @@ class UserTest extends TestCase
     public function provideDataForContact(): array
     {
         return [
-        [
             [
-                'field' => 'name',
-                'value'=> 'Tim van Engelen'
-            ]
-        ],[
-            [
-                'field' => 'username',
-                'value'=> 'timvanengelen'
-            ]
-        ],[
+                [
+                    'field' => 'name',
+                    'value' => 'Tim van Engelen'
+                ]
+            ], [
+                [
+                    'field' => 'username',
+                    'value' => 'timvanengelen'
+                ]
+            ], [
                 [
                     'field' => 'date_of_birth',
-                    'value'=> '14-10-1986'
+                    'value' => '14-10-1986'
+                ]
+            ], [
+                [
+                    'field' => 'avatar',
+                    'value' => $this->faker->imageUrl
                 ]
             ]
         ];
