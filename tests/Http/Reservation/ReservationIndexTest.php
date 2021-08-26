@@ -9,7 +9,7 @@ class ReservationIndexTest extends TestCase
     /** @test */
     public function zero_reservations(): void
     {
-        $response = $this->get('/');
+        $response = $this->get('/api/reservations');
 
         $response->assertStatus(200);
     }
