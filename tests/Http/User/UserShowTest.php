@@ -1,15 +1,15 @@
 <?php
 
-namespace Tests\Http\Profile;
+namespace Tests\Http\User;
 
 use Tests\TestCase;
 
-class ProfileShowTest extends TestCase
+class UserShowTest extends TestCase
 {
     /** @test */
     public function basic_game(): void
     {
-        $response = $this->get('/api/profiles/1');
+        $response = $this->get('/api/users/1');
 
         $response->assertStatus(200);
         $response->assertJson([]);

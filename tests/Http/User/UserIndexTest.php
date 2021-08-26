@@ -1,15 +1,15 @@
 <?php
 
-namespace Tests\Http\Profile;
+namespace Tests\Http\User;
 
 use Tests\TestCase;
 
-class ProfileIndexTest extends TestCase
+class UserIndexTest extends TestCase
 {
     /** @test */
     public function basic_profiles(): void
     {
-        $response = $this->get('/api/profiles');
+        $response = $this->get('/api/users');
 
         $response->assertStatus(200);
         $response->assertJson([]);
