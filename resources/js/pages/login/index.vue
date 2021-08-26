@@ -1,17 +1,23 @@
 <template>
-    <div>
-        <div class="d-flex">
-            <img src="~/assets/logo.svg" />
+    <div class="flex flex-column h-view center-h center-v">
+            <img id="login-logo" src="~/assets/logo.svg" />
             <v-btn
-  color="primary"
-  elevation="2"
->login</v-btn>
-        </div>
+              color="primary"
+              elevation="2"
+            >login</v-btn>
     </div>
 </template>
 <script>
 
 export default {
-    
-}
+    mounted() {
+        console.log(this.$router);
+    },
+};
 </script>
+
+<style lang="scss">
+    #login-logo {
+        max-width: 120px;
+    }
+</style>
