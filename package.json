@@ -7,6 +7,7 @@
         "start": "nuxt start"
     },
     "devDependencies": {
+        "@nuxtjs/vuetify": "^1.12.1",
         "axios": "^0.21",
         "fibers": "^5.0.0",
         "laravel-mix": "^6.0.6",
