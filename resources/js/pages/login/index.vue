@@ -1,4 +1,6 @@
 <template>
+    <div>
+        <Title titleLight="hoi" titleBold="doei" subtitle="groejtes"></Title>
     <div class="flex flex-column h-view center-h center-v">
             <img id="login-logo" src="~/assets/logo.svg" />
         <p class="custom-color-one">test</p>
