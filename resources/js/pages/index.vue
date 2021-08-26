@@ -13,13 +13,14 @@
     import User from '../models/user';
 
     export default {
+        computed: {
+            users() {
+                return User.all();
+            },
+        },
+
         mounted() {
-            console.log('test');
-            User.insert({
-                data: {
-                    name: 'Test',
-                }
-            });
+            User.api().get('https://google.com/api/users');
         },
     };
 </script>
