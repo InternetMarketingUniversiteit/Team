@@ -1,0 +1,51 @@
+[
+  {
+    "name": "calendar",
+    "path": "/calendar",
+    "component": "/Users/jelleimu/code/Team/resources/js/pages/calendar/index.vue",
+    "chunkName": "pages/calendar/index",
+    "_name": "_583766a8"
+  },
+  {
+    "name": "dashboard",
+    "path": "/dashboard",
+    "component": "/Users/jelleimu/code/Team/resources/js/pages/dashboard/index.vue",
+    "chunkName": "pages/dashboard/index",
+    "_name": "_26c3e8c0"
+  },
+  {
+    "name": "games",
+    "path": "/games",
+    "component": "/Users/jelleimu/code/Team/resources/js/pages/games/index.vue",
+    "chunkName": "pages/games/index",
+    "_name": "_32884d2d"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "/Users/jelleimu/code/Team/resources/js/pages/login/index.vue",
+    "chunkName": "pages/login/index",
+    "_name": "_25a15056"
+  },
+  {
+    "name": "profile",
+    "path": "/profile",
+    "component": "/Users/jelleimu/code/Team/resources/js/pages/profile/index.vue",
+    "chunkName": "pages/profile/index",
+    "_name": "_1adb7c56"
+  },
+  {
+    "name": "login-register",
+    "path": "/login/register",
+    "component": "/Users/jelleimu/code/Team/resources/js/pages/login/register.vue",
+    "chunkName": "pages/login/register",
+    "_name": "_01cb2670"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/jelleimu/code/Team/resources/js/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_413f13bb"
+  }
+]
