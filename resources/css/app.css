@@ -8,13 +8,13 @@ button {
 
 button.secondary {
     @apply bg-blue-100 text-blue-500;
-    background:rgba(#3691FF, 0.1);
+    background: rgba(33, 150, 243, 0.1);
 
-    &:hover {
-        @apply bg-blue-200 text-blue-500;
-    }
+}
+button.secondary:hover {
+     @apply bg-blue-200 text-blue-500;
 }
 
 body {
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
 }
