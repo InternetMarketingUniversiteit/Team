@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+button {
+    @apply bg-blue-500 text-white rounded w-full py-4 shadow transition duration-150 ease-in-out;
+}
+
+button.secondary {
+    @apply bg-blue-100 text-blue-500;
+    background:rgba(#3691FF, 0.1);
+
+    &:hover {
+        @apply bg-blue-200 text-blue-500;
+    }
+}
+
 body {
     font-family: Roboto;
 }

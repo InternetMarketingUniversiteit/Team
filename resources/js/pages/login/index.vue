@@ -1,13 +1,9 @@
 <template>
-        <div class="flex flex-column h-view center-h center-v">
-
-        <Title titleLight="hoi" titleBold="doei" subtitle="groejtes"></Title>
-            <img id="login-logo" src="~/assets/logo.svg" />
+    <div class="flex flex-col h-screen justify-center items-center">
+        <!--<Title titleLight="hoi" titleBold="doei" subtitle="groejtes"></Title>-->
+        <img id="login-logo" src="~/assets/logo.svg" />
         <p class="custom-color-one">test</p>
-            <v-btn
-              color="primary"
-              elevation="2"
-            >login</v-btn>
+        <input type="text" placeholder="Test">
     </div>
 </template>
 <script>
