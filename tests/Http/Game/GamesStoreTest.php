@@ -1,15 +1,15 @@
 <?php
 
-namespace Tests\Http\Games;
+namespace Tests\Http\Game;
 
 use Tests\TestCase;
 
-class GamesShowTest extends TestCase
+class GamesStoreTest extends TestCase
 {
     /** @test */
     public function basic_game(): void
     {
-        $response = $this->get('/api/games/1');
+        $response = $this->post('/api/games', []);
 
         $response->assertStatus(200);
         $response->assertJson([]);

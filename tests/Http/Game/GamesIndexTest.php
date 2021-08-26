@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Http\Games;
+namespace Tests\Http\Game;
 
 use Tests\TestCase;
 

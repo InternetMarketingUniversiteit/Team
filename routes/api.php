@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\GamesController;
+use App\Http\Controllers\GameController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,7 +24,8 @@ Route::get('reservations', function (Request $request) {
     return [];
 });
 
-Route::resource('games', GamesController::class);
+Route::resource('games', GameController::class);
+Route::resource('profiles', ProfileController::class);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
