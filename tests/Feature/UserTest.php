@@ -30,7 +30,6 @@ class UserTest extends TestCase
      */
     public function a_user_has_profile_props($data)
     {
-        dump($data);
         $field = $data['field'];
         $value = $data['value'];
 
