@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 button {
-    @apply bg-blue-500 text-white rounded w-full py-4 shadow transition duration-150 ease-in-out;
+    /*@apply bg-blue-500 text-white rounded w-full py-4 shadow transition duration-150 ease-in-out;*/
 }
 
 button.secondary {

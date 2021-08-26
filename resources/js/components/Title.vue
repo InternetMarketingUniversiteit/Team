@@ -1,13 +1,13 @@
 // <Title titleLight="hoi" titleBold="doei" subtitle="groejtes"></Title>
 
-<template functional>
+<template>
 	<div class="title flex items-center">
 		<div class="circle"></div>
 		<div class="-ml-16 flex items-center">
-			<NuxtLink :to="props.backLink" v-if="props.backLink" class="back-arrow mr-4"><i class="fas fa-chevron-left"></i></NuxtLink>
+			<NuxtLink :to="backLink" v-if="backLink" class="back-arrow mr-4"><i class="fas fa-chevron-left"></i></NuxtLink>
 			<div>
-				<h1>{{ props.titleLight }} {{ props.titleLight && props.titleBold && '- ' }} <span>{{ props.titleBold && props.titleBold }}</span></h1>
-				<h2 v-if="props.subtitle" class="">{{ props.subtitle }}</h2>
+				<h1>{{ titleLight }} {{ titleLight && titleBold && '- ' }} <span>{{ titleBold && titleBold }}</span></h1>
+				<h2 v-if="subtitle" class="">{{ subtitle }}</h2>
 			</div>
 		</div>
 	</div>
@@ -19,7 +19,6 @@ export default {
 	props: {
 		titleLight: {
 			type: String,
-			required: true
 		},
 		titleBold: {
 			type: String
@@ -38,7 +37,7 @@ export default {
 	.title {
 		position: relative;
 
-		.circle{ 
+		.circle{
 			width:78px;
 			height: 78px;
 			border-radius:100%;
