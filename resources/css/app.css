@@ -29,3 +29,11 @@
 .w-full {
     width: 100%;
 }
+
+.justify-items {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
