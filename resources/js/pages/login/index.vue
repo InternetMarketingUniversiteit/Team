@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Title titleLight="hoi" titleBold="doei" subtitle="groejtes"></Title>
         <div class="d-flex">
             <img src="~/assets/logo.svg" />
             <v-btn
