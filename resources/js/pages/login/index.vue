@@ -1,11 +1,8 @@
 <template>
-    <div class="flex flex-column h-view center-h center-v">
+    <div class="flex flex-col h-screen justify-center items-center">
             <img id="login-logo" src="~/assets/logo.svg" />
         <p class="custom-color-one">test</p>
-            <v-btn
-              color="primary"
-              elevation="2"
-            >login</v-btn>
+            <input type="text" placeholder="Test">
     </div>
 </template>
 <script>
