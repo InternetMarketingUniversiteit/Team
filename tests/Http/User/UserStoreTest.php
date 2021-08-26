@@ -7,7 +7,7 @@ use Tests\TestCase;
 class UserStoreTest extends TestCase
 {
     /** @test */
-    public function basic_game(): void
+    public function basic_user(): void
     {
         $response = $this->post('/api/users', []);
 

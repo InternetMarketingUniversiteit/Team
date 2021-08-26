@@ -15,7 +15,6 @@ class AddProfileColumnsToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->date('date_of_birth');
-            $table->string('username');
         });
     }
 
@@ -28,10 +27,6 @@ class AddProfileColumnsToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('date_of_birth');
-        });
-
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('username');
         });
     }
 }

@@ -2,24 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\GameStoreRequest;
+use App\Http\Requests\UserIndexRequest;
+use App\Http\Requests\UserStoreRequest;
 use App\Http\Resources\UserResource;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Routing\Controller as BaseController;
 
 class UserController extends BaseController
 {
-    public function show(Request $request): UserResource
+    public function show(Request $request, User $user): UserResource
     {
-        return UserResource::make([]);
-    }
-    public function index(GameStoreRequest $request): JsonResource
-    {
-        return UserResource::collection([]);
+        return UserResource::make($user);
     }
 
-    public function store(GameStoreRequest $request): UserResource
+    public function index(UserIndexRequest $request): JsonResource
+    {
+        return UserResource::collection(User::all());
+    }
+
+    public function store(UserStoreRequest $request): UserResource
     {
         return UserResource::make([]);
     }
