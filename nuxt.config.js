@@ -6,5 +6,6 @@ export default {
     css: [
       // SCSS file in the project
       '~/../../node_modules/vuetify/src/styles/styles.sass'
-    ]
+    ],
+    components: true
 }
