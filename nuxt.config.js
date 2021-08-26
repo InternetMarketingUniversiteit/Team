@@ -1,11 +1,7 @@
 export default {
     srcDir: 'resources/js/',
-    buildModules: [
-      '@nuxtjs/vuetify',
-    ],
+    buildModules: ['@nuxtjs/tailwindcss'],
     css: [
-      // SCSS file in the project
-      '~/../../node_modules/vuetify/src/styles/styles.sass',
       '../css/app.css',
     ],
     components: true,
