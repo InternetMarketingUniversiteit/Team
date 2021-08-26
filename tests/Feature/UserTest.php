@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\Reservation;
 use App\Models\User;
+use App\Models\UserActivity;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Http\UploadedFile;
@@ -24,13 +25,22 @@ class UserTest extends TestCase
         $this->assertCount(3, $user->reservations);
     }
 
+    /** @test */
+    public function a_user_has_activities()
+    {
+        $user = User::factory()
+            ->has(UserActivity::factory()->count(3), 'activities')
+            ->create();
+
+        $this->assertCount(3, $user->activities);
+    }
+
     /**
      * @test
      * @dataProvider provideDataForContact
      */
     public function a_user_has_profile_props($data)
     {
-        dump($data);
         $field = $data['field'];
         $value = $data['value'];
 
@@ -46,20 +56,25 @@ class UserTest extends TestCase
     public function provideDataForContact(): array
     {
         return [
-        [
             [
-                'field' => 'name',
-                'value'=> 'Tim van Engelen'
-            ]
-        ],[
-            [
-                'field' => 'username',
-                'value'=> 'timvanengelen'
-            ]
-        ],[
+                [
+                    'field' => 'name',
+                    'value' => 'Tim van Engelen'
+                ]
+            ], [
+                [
+                    'field' => 'username',
+                    'value' => 'timvanengelen'
+                ]
+            ], [
                 [
                     'field' => 'date_of_birth',
-                    'value'=> '14-10-1986'
+                    'value' => '14-10-1986'
+                ]
+            ], [
+                [
+                    'field' => 'avatar',
+                    'value' => $this->faker->imageUrl
                 ]
             ]
         ];
