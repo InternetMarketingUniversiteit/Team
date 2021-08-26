@@ -18,6 +18,10 @@ Route::get('status', function() {
     return response()->noContent( 200);
 });
 
+Route::get('reservations', function (Request $request) {
+    return [];
+});
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
