@@ -1,7 +1,7 @@
 <template>
     <div>
         games overview
-        <Card></Card>
+        <Card :game="'table_football'"></Card>
     </div>
 </template>
 
