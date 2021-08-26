@@ -1,3 +1,5 @@
+// <Title titleLight="hoi" titleBold="doei" subtitle="groejtes"></Title>
+
 <template functional>
 	<div class="title flex items-center">
 		<div class="circle"></div>
