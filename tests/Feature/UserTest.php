@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\Reservation;
 use App\Models\User;
+use App\Models\UserActivity;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Http\UploadedFile;
@@ -22,6 +23,16 @@ class UserTest extends TestCase
             ->create();
 
         $this->assertCount(3, $user->reservations);
+    }
+
+    /** @test */
+    public function a_user_has_activities()
+    {
+        $user = User::factory()
+            ->has(UserActivity::factory()->count(3), 'activities')
+            ->create();
+
+        $this->assertCount(3, $user->activities);
     }
 
     /**
