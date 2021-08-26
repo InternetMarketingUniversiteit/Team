@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\UserStoreRequest;
+use App\Http\Requests\UserUpdateRequest;
 use App\Http\Resources\GameResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -14,12 +14,12 @@ class GameController extends BaseController
     {
         return GameResource::make([]);
     }
-    public function index(UserStoreRequest $request): JsonResource
+    public function index(UserUpdateRequest $request): JsonResource
     {
         return GameResource::collection([]);
     }
 
-    public function store(UserStoreRequest $request): GameResource
+    public function store(UserUpdateRequest $request): GameResource
     {
         return GameResource::make([]);
     }

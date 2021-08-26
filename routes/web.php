@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Sukkel, ga naar https://team.imu.nl/api';
 });

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserIndexRequest;
-use App\Http\Requests\UserStoreRequest;
+use App\Http\Requests\UserUpdateRequest;
 use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -22,8 +22,10 @@ class UserController extends BaseController
         return UserResource::collection(User::all());
     }
 
-    public function store(UserStoreRequest $request): UserResource
+    public function update(UserUpdateRequest $request, User $user): UserResource
     {
-        return UserResource::make([]);
+        $user->fill($request->validated());
+        $user->save();
+        return UserResource::make($user);
     }
 }
