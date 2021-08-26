@@ -1,13 +1,8 @@
 <template>
-    <div>
-        <Title titleLight="hoi" titleBold="doei" subtitle="groejtes"></Title>
-    <div class="flex flex-column h-view center-h center-v">
+    <div class="">
+        <Title titleLight="Poolen" titleBold="Uitdagen" subtitle="groejtes" ></Title>
             <img id="login-logo" src="~/assets/logo.svg" />
-        <p class="custom-color-one">test</p>
-            <v-btn
-              color="primary"
-              elevation="2"
-            >login</v-btn>
+            <button class="secondary" type="button">login</button>
     </div>
 </template>
 <script>

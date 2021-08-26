@@ -1,8 +1,13 @@
 <template functional>
 	<div class="title flex items-center">
 		<div class="circle"></div>
-		<h1 class="pl-6">{{ props.titleLight }} {{ props.titleLight && '-' + props.titleBold }}</h1>
-		<h2 v-if="props.subtitle" class="">{{ props.subtitle }}</h2>
+		<div class="-ml-16 flex items-center">
+			<NuxtLink :to="props.backLink" v-if="props.backLink" class="back-arrow mr-4"><i class="fas fa-chevron-left"></i></NuxtLink>
+			<div>
+				<h1>{{ props.titleLight }} {{ props.titleLight && props.titleBold && '- ' }} <span>{{ props.titleBold && props.titleBold }}</span></h1>
+				<h2 v-if="props.subtitle" class="">{{ props.subtitle }}</h2>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -20,6 +25,9 @@ export default {
 		subtitle: {
 			type: String,
 		},
+		backLink: {
+			type: String,
+		}
 	}
 }
 </script>
@@ -33,12 +41,16 @@ export default {
 			height: 78px;
 			border-radius:100%;
 			background:rgba(#2196F3, .1);
-			position: absolute;
 		}
 
 		h1 {
 			font-size:24px;
-			font-weight: bold;
+			font-weight:normal;
+			@apply leading-none;
+
+			span {
+				font-weight: bold;
+			}
 		}
 
 		h2 {
