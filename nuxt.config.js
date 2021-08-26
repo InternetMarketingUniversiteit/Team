@@ -2,5 +2,8 @@ export default {
     router: {
         base: '/dashboard/'
     },
-    srcDir: 'resources/js/'
+    srcDir: 'resources/js/',
+    buildModules: [
+      '@nuxtjs/vuetify',
+    ]
 }
