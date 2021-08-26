@@ -228,6 +228,8 @@
                 <slot></slot>
             </main>
         </div>
+
+        <Navigation />
     </div>
 </template>
 
@@ -238,6 +240,7 @@
     import JetDropdownLink from '@/Jetstream/DropdownLink.vue'
     import JetNavLink from '@/Jetstream/NavLink.vue'
     import JetResponsiveNavLink from '@/Jetstream/ResponsiveNavLink.vue'
+    import Navigation from '../components/Navigation.vue';
     import { Head, Link } from '@inertiajs/inertia-vue3';
 
     export default {
@@ -254,6 +257,7 @@
             JetNavLink,
             JetResponsiveNavLink,
             Link,
+            Navigation,
         },
 
         data() {
