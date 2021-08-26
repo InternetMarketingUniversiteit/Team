@@ -1,8 +1,9 @@
 <template>
     <div class="flex flex-col h-screen justify-center items-center">
-            <img id="login-logo" src="~/assets/logo.svg" />
+        <!--<Title titleLight="hoi" titleBold="doei" subtitle="groejtes"></Title>-->
+        <img id="login-logo" src="~/assets/logo.svg" />
         <p class="custom-color-one">test</p>
-            <input type="text" placeholder="Test">
+        <input type="text" placeholder="Test">
     </div>
 </template>
 <script>

@@ -1,29 +1,17 @@
 <template>
-    <div>
-        <v-bottom-navigation>
-            <v-btn value="recent">
-                <span>Recent</span>
-                <i class="fa fa-check"></i>
-                <v-icon>mdi-history</v-icon>
-            </v-btn>
-
-            <v-btn value="favorites">
-                <span>Favorites</span>
-
-                <v-icon>mdi-heart</v-icon>
-            </v-btn>
-
-            <v-btn value="nearby">
-                <span>Nearby</span>
-
-                <v-icon>mdi-map-marker</v-icon>
-            </v-btn>
-        </v-bottom-navigation>
+    <div class="d-flex">
+        <NuxtLink to="/dashboard">
+            <span>Overzicht</span>
+        </NuxtLink>
+        <NuxtLink to="/games">
+            <span>Games</span>
+        </NuxtLink>
+        <NuxtLink to="/calendar">
+            <span>Agenda</span>
+        </NuxtLink>
+        <NuxtLink to="/profile">
+            <span>Profile</span>
+        </NuxtLink>
     </div>
 </template>
-<script>
 
-</script>
-<style>
-
-</style>
